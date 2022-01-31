@@ -1,0 +1,75 @@
+html, body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #222222;
+}
+
+h1 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
+  color: white;
+}
+
+.sudoku-root {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+.sudoku-container {
+  box-sizing: content-box;
+  border: 3px solid black;
+  margin: auto;
+  width: 540px;
+  height: 540px;
+  display: table;
+}
+
+tr:nth-child(3n) td {
+	border-bottom: 3px solid black;
+}
+
+.sudoku-number {
+  font-size: 180%;
+  width: 60px;
+  height: 60px;
+  display: table-cell;
+  line-height: 50px;
+  text-align: center;
+  border: 1px solid white;
+  background-color: #f3d676;      
+}
+
+.sudoku-number:nth-child(3n){
+  border-right: 3px solid black;
+}
+
+.div-container{
+  width: 200px;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.button-container {
+  width: 50%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.button-sudoku {
+  height: 60px;
+  width: 60px;
+  background-color: rgb(143, 212, 228);
+  margin: 10px 10px 10px 10px;
+  text-align: center;
+  border: 2px solid rgb(40, 199, 8);
+  border-radius: 50%;
+}
+
+.button-sudoku:hover{
+  background-color: rgb(247, 97, 222);
+  border: 1px double orange;
+}
