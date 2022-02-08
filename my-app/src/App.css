@@ -11,65 +11,134 @@ h1 {
 }
 
 .sudoku-root {
+  margin: 0 auto;
   width: 100%;
   height: 100%;
   padding: 10px;
-}
-
-.sudoku-container {
-  box-sizing: content-box;
-  border: 3px solid black;
-  margin: auto;
-  width: 540px;
-  height: 540px;
-  display: table;
-}
-
-tr:nth-child(3n) td {
-	border-bottom: 3px solid black;
-}
-
-.sudoku-number {
-  font-size: 180%;
-  width: 60px;
-  height: 60px;
-  display: table-cell;
-  line-height: 50px;
-  text-align: center;
-  border: 1px solid white;
-  background-color: #f3d676;      
-}
-
-.sudoku-number:nth-child(3n){
-  border-right: 3px solid black;
-}
-
-.div-container{
-  width: 200px;
-  height: 100px;
-  margin: 0 auto;
   display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
+  flex-flow: column nowrap;
 }
 
-.button-container {
-  width: 50%;
-  height: 100%;
-  margin: 0 auto;
+@media only screen and (min-width: 600px) {
+  .sudoku-container {
+    box-sizing: content-box;
+    border: 3px solid black;
+    margin: auto;
+    width: 540px;
+    height: 540px;
+    display: table;
+  }
+  
+  tr:nth-child(3n) td {
+    border-bottom: 3px solid black;
+  }
+  
+  .sudoku-number {
+    font-size: 180%;
+    width: 60px;
+    height: 60px;
+    display: table-cell;
+    line-height: 50px;
+    text-align: center;
+    border: 1px solid white;
+    background-color: #f3d676;      
+  }
+  
+  .sudoku-number:nth-child(3n){
+    border-right: 3px solid black;
+  }
+  
+  .div-container{
+    width: 200px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+  
+  .button-container {
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+  }
+  
+  .button-sudoku {
+    height: 60px;
+    width: 60px;
+    background-color: rgb(143, 212, 228);
+    margin: 10px 10px 10px 10px;
+    text-align: center;
+    border: 2px solid rgb(40, 199, 8);
+    border-radius: 50%;
+  }
+  
+  .button-sudoku:hover{
+    background-color: rgb(247, 97, 222);
+    border: 1px double orange;
+  }
 }
 
-.button-sudoku {
-  height: 60px;
-  width: 60px;
-  background-color: rgb(143, 212, 228);
-  margin: 10px 10px 10px 10px;
-  text-align: center;
-  border: 2px solid rgb(40, 199, 8);
-  border-radius: 50%;
-}
-
-.button-sudoku:hover{
-  background-color: rgb(247, 97, 222);
-  border: 1px double orange;
+@media only screen and (max-width: 600px) {
+  .sudoku-container {
+    box-sizing: content-box;
+    border: 3px solid black;
+    margin: auto;
+    width: 270px;
+    height: 270px;
+    display: table;
+  }
+  
+  tr:nth-child(3n) td {
+    border-bottom: 3px solid black;
+  }
+  
+  .sudoku-number {
+    font-size: 180%;
+    width: 30px;
+    height: 30px;
+    display: table-cell;
+    line-height: 25px;
+    text-align: center;
+    border: 1px solid white;
+    background-color: #f3d676;      
+  }
+  
+  .sudoku-number:nth-child(3n){
+    border-right: 3px solid black;
+  }
+  
+  .div-container{
+    width: 50px;
+    height: 25px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  .button-container {
+    width: 50%;
+    height: 100%;
+    margin-bottom: 35px;
+    padding: 10px;
+  }
+  
+  .button-sudoku {
+    height: 30px;
+    width: 30px;
+    background-color: rgb(143, 212, 228);
+    margin: 10px 10px 10px 10px;
+    text-align: center;
+    border: 2px solid rgb(40, 199, 8);
+    border-radius: 50%;
+    font-size: 1.3vw;
+  }
+  
+  .button-sudoku:hover{
+    background-color: rgb(247, 97, 222);
+    border: 1px double orange;
+  }
 }
