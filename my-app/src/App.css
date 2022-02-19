@@ -20,17 +20,33 @@ h1 {
 }
 
 @media only screen and (min-width: 600px) {
+	.sudoku-holder{
+		width: 600px;
+		height: 650px;
+		background-color: #FFF;
+		margin: 0 auto;
+		border-radius: 10px;
+		box-shadow: 5px 5px 0px 0px #f3d676;
+		position: relative;
+		display: flex;
+		justify-content: center;
+	}
+
   .sudoku-container {
+		margin: auto;
     box-sizing: content-box;
-    border: 3px solid black;
+    border: 3px solid blueviolet;
     margin: auto;
     width: 540px;
     height: 540px;
     display: table;
+		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%);
   }
   
   tr:nth-child(3n) td {
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid blueviolet;
   }
   
   .sudoku-number {
@@ -40,12 +56,12 @@ h1 {
     display: table-cell;
     line-height: 50px;
     text-align: center;
-    border: 1px solid white;
-    background-color: #f3d676;      
+    border: 1px solid blueviolet;
+    background-color: #f0ae57;
   }
   
   .sudoku-number:nth-child(3n){
-    border-right: 3px solid black;
+    border-right: 3px solid blueviolet;
   }
   
   .div-container{
@@ -55,12 +71,7 @@ h1 {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-  }
-  
-  .button-container {
-    width: 50%;
-    height: 100%;
-    margin: 0 auto;
+		justify-content: center;
   }
   
   .button-sudoku {
@@ -71,18 +82,32 @@ h1 {
     text-align: center;
     border: 2px solid rgb(40, 199, 8);
     border-radius: 50%;
+		transition: 1s ease;
   }
   
   .button-sudoku:hover{
     background-color: rgb(247, 97, 222);
     border: 1px double orange;
+		transition: 1s ease;
   }
 }
 
 @media only screen and (max-width: 600px) {
+	.sudoku-holder{
+		width: 300px;
+		height: 360px;
+		background-color: #FFF;
+		margin: 0 auto;
+		border-radius: 10px;
+		box-shadow: 5px 5px 0px 0px #f3d676;
+		position: relative;
+		display: flex;
+		justify-content: center;
+	}
+
   .sudoku-container {
     box-sizing: content-box;
-    border: 3px solid black;
+    border: 2px solid blueviolet;
     margin: auto;
     width: 270px;
     height: 270px;
@@ -90,7 +115,7 @@ h1 {
   }
   
   tr:nth-child(3n) td {
-    border-bottom: 3px solid black;
+    border-bottom: 2px solid blueviolet;
   }
   
   .sudoku-number {
@@ -105,7 +130,7 @@ h1 {
   }
   
   .sudoku-number:nth-child(3n){
-    border-right: 3px solid black;
+    border-right: 2px solid blueviolet;
   }
   
   .div-container{
@@ -119,13 +144,6 @@ h1 {
     padding: 10px;
   }
   
-  .button-container {
-    width: 50%;
-    height: 100%;
-    margin-bottom: 35px;
-    padding: 10px;
-  }
-  
   .button-sudoku {
     height: 30px;
     width: 30px;
@@ -135,10 +153,12 @@ h1 {
     border: 2px solid rgb(40, 199, 8);
     border-radius: 50%;
     font-size: 1.3vw;
+		transition: 1s ease;
   }
   
   .button-sudoku:hover{
     background-color: rgb(247, 97, 222);
     border: 1px double orange;
+		transition: 1s ease;
   }
 }

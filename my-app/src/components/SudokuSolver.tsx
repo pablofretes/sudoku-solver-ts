@@ -41,8 +41,13 @@ const SudokuSolver: React.FC = () => {
   return (
     <div className='sudoku-root'>
       <h1>Sudoku Solver</h1>
-      <Buttons handleFetch={handleFetch} handleSubmit={handleSubmit} />
-      <SudokuTable sudoku={sudoku} />
+			<div className='div-container'>
+					<Buttons handleEvent={handleFetch} value='shuffle'/>
+					<Buttons handleEvent={handleSubmit} value='solve'/>
+			</div>
+			<div className='sudoku-holder'>
+      	<SudokuTable sudoku={sudoku} />
+			</div>
     </div>
   );
 };
